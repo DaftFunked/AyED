@@ -1,0 +1,24 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    // Variables para almacenar los tiempos del ratón y del pato
+    int R, P;
+
+    // Leer los tiempos del ratón y del pato
+    cin >>R>> P;
+
+    // Calcular el tiempo que le tomará al ratón alcanzar al pato sacándole una vuelta de ventaja
+    // Dado que la distancia recorrida por el ratón es igual a la longitud de la pista,
+    // podemos usar la misma fórmula de distancia = velocidad x tiempo
+    // La distancia recorrida por el pato es 0, ya que el pato no se ha movido
+    // Por lo tanto, podemos usar la ecuación (distancia del ratón) - (distancia del pato) = velocidad del ratón x tiempo
+    // Lo que nos da: L - 0 = velocidad del ratón x tiempo
+    // Simplificando, obtenemos: tiempo = L / velocidad del ratón
+    // Donde L es la longitud de la pista, que es igual al tiempo del pato * velocidad del ratón menos la velocidad del pato
+    // Imprimir el resultado
+    cout << static_cast<double>(P * R) / (P - R) << endl;;
+
+    return 0;
+}
